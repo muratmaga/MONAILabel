@@ -25,3 +25,5 @@ These instructions are meant to be run on a Ubuntu 22.04 image with direct GPU r
 10. Edit the contents of the '/workspace/radiology/lib/configs/deepedit.py` to match the label indices and names you used in your segmentation. For your convenience, an edited example script is already already provided for you. In your original terminal window use the command ```cp /home/exouser/sample_data_MONAI/deepedit.py /home/exouser/MONAI/radiology/lib/configs/deepedit.py```
     If you get an error message, it is likely that step #9 has not completed successfully for some reason.
  
+11. You are now ready to launch the monailabel server and start the training using the Slicer extension
+```monailabel start_server --app /workspace/radiology/ --studies /workspace/myData/ --conf models deepedit```
