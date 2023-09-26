@@ -32,14 +32,20 @@ docker run -it --rm --gpus all --ipc=host --net=host -v /home/exouser/MONAI:/wor
 **NOTE:** Docker is a virtual environment isolated from the host computer you are using. `-v` or `--volumes` command above maps the contents of the specified host folder (in this case `/home/exouser/MONAI/`) as a different folder (in this case `/workspace') inside the docker environment. All the commands below to invoke the monailabel is run inside the docker, and hence uses the docker folder reference:
 
 7. Obtain the radiology deepedit app
-    ```monailabel apps --download --name radiology --output /workspace/```
-8. Edit the contents of the '/workspace/radiology/lib/configs/deepedit.py` to match the label indices and names you used in your segmentation. For your convenience, an edited example script is already already provided for you. In your original terminal window use the command ```cp /home/exouser/sample_data_MONAI/deepedit.py /home/exouser/MONAI/radiology/lib/configs/deepedit.py```
-    If you get an error message, it is likely that step #9 has not completed successfully for some reason.
+```
+monailabel apps --download --name radiology --output /workspace/
+```
+9. Edit the contents of the `/workspace/radiology/lib/configs/deepedit.py` to match the label indices and names you used in your segmentation. For your convenience, an edited example script is already already provided for you. In your original terminal window use the command
+```
+sudo cp /home/exouser/sample_data_MONAI/deepedit.py /home/exouser/MONAI/radiology/lib/configs/deepedit.py
+```
+
+If you get an error message, it is likely that step #9 has not completed successfully for some reason.
  
-9. You are now ready to launch the monailabel server and start the training using the Slicer extension
+10. You are now ready to launch the monailabel server and start the training using the Slicer extension
 ```monailabel start_server --app /workspace/radiology/ --studies /workspace/myData/ --conf models deepedit```
 
-10. Download and uncompress Slicer (use stable 5.4.0)
+11. Download and uncompress Slicer (use stable 5.4.0)
 ```
 tar zxvf /home/exouser/Downloads/Slicer-5.4.0-linux-amd64.tar.gz
 ```
