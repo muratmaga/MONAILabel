@@ -6,14 +6,14 @@ These instructions are meant to be run on a Ubuntu 22.04 image with direct GPU r
 1. Setup your working directory for MONAILabel apps. 
    Open a terminal window and type
    ```
-   mkdir -p /home/exouser/MONAI/Data
+   mkdir -p /home/exouser/MONAI/myData
    ```
 2. Upload your dataset to your JS2 instance. For this tutorial dataset is already provided to you under
    `/home/exouser/sample_data_MONAI`
 3. MonaiLabel expects the data to be structured in a specific way. The volume files (grayscale images) will be at the top level of your data folder. At the same level as grayscale image there will be one more folder `labels/` in which there will be two sub-folders `original/` and `final/`. Originals will be empty. `final/` folder will contain the manually segmented labelmaps (e.g., training data). It is crucial that the grayscale volumes and their segmentations have identical file names. Assuming your dataset is called ```myData```, these commands will create the necessary folder structure under `/home/exouser/MONAI/Data`:
    ```
-   mkdir -p /home/exouser/MONAI/Data/myData/labels/final
-   mkdir /home/exouser/MONAI/Data/myData/labels/originals
+   mkdir -p /home/exouser/MONAI/myData/labels/final
+   mkdir /home/exouser/MONAI/myData/labels/originals
    ```
 4. Copy the contents sample data folder of the `grayscale/` to `myData/`
 ```
