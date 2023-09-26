@@ -43,14 +43,16 @@ sudo cp /home/exouser/sample_data_MONAI/deepedit.py /home/exouser/MONAI/radiolog
 If you get an error message, it is likely that step #9 has not completed successfully for some reason.
  
 10. You are now ready to launch the monailabel server and start the training using the Slicer extension
-```monailabel start_server --app /workspace/radiology/ --studies /workspace/myData/ --conf models deepedit```
+```
+monailabel start_server --app /workspace/radiology/ --studies /workspace/myData/ --conf models deepedit
+```
 
-11. Download and uncompress Slicer (use stable 5.4.0)
+12. Download and uncompress Slicer (use stable 5.4.0)
 ```
 tar zxvf /home/exouser/Downloads/Slicer-5.4.0-linux-amd64.tar.gz
 ```
 11. Run Slicer
 ```
-/home/exosuer/Downloads/Slicer-5.4.0-linux-amd64/Slicer
+/home/exouser/Downloads/Slicer-5.4.0-linux-amd64/Slicer
 ```
-    and then go to the extenion manager and install MonaiLabel extension 
+and then go to the extenion manager and install MonaiLabel extension 
