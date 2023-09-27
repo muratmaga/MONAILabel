@@ -49,7 +49,7 @@ monailabel start_server --app /workspace/radiology/ --studies /workspace/myData/
 
 12. Download and uncompress Slicer (use stable 5.4.0)
 ```
-tar zxvf /home/exouser/Downloads/Slicer-5.4.0-linux-amd64.tar.gz
+tar zxvf /home/exouser/Downloads/Slicer-5.4.0-linux-amd64.tar.gz -C ~/Downloads/
 ```
 11. Run Slicer
 ```
