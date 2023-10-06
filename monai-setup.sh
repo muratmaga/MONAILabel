@@ -5,7 +5,7 @@
 #set this path to the location of the nnunet path defined from yesterday
 BASE=/home/exouser/Downloads/nnmouse/raw/Dataset001_mouse/
 
-OUT=/home/exouser/monailabel
+OUT=/home/exouser/monailabelData
 mkdir -p $OUT/labels/final
 mkdir -p $OUT/labels/original
 
