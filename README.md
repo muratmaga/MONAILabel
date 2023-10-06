@@ -37,7 +37,7 @@ monailabel apps --download --name radiology --output /workspace/
 ```
 9. Edit the contents of the `/workspace/radiology/lib/configs/deepedit.py` to match the label indices and names you used in your segmentation. For your convenience, an edited example script is already already provided for you. In your original terminal window use the command
 ```
-sudo cp /home/exouser/sample_data_MONAI/deepedit.py /home/exouser/MONAI/radiology/lib/configs/deepedit.py
+sudo cp deepedit.py /home/exouser/MONAI/radiology/lib/configs
 ```
 
 If you get an error message, it is likely that step #9 has not completed successfully for some reason.
